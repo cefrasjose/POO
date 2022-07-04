@@ -17,6 +17,9 @@ public:
   // sobrecarga de operadores
   Complexo operator+(Complexo&);
   Complexo operator-(Complexo&);
+  bool operator!();
+  Complexo& operator++();
+  Complexo operator++(int); // pos-incremento
 };
 
 #endif
