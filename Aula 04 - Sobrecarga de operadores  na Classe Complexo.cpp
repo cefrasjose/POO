@@ -36,3 +36,21 @@ Complexo Complexo::operator-(Complexo& par) { // a = b -c;
   float y = this->im - par.im;
   return Complexo {x, y};
 }
+
+bool Complexo::operator!() {
+  if(re == 0 && im == 0) return true;
+  return false;
+}
+
+Complexo& Complexo::operator++() {
+  this->re = this->re + 1;
+  this->im = this->im + 1;
+  return *this;
+}
+
+Complexo Complexo::operator++(int value) {
+  Complexo temp = *this;
+  this->re = this->re + 1;
+  this->im = this->im + 1;
+  return temp;
+}
